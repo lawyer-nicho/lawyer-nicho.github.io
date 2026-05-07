@@ -9,19 +9,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg-deep: #0a0a0f;
-    --bg-surface: #111118;
-    --bg-card: #16161f;
-    --bg-card-hover: #1a1a26;
-    --text-primary: #eae6dc;
-    --text-secondary: #9e9a8c;
-    --text-muted: #6b6860;
-    --accent: #c4a050;
-    --accent-light: #d4b86a;
-    --accent-subtle: rgba(196, 160, 80, 0.12);
-    --accent-glow: rgba(196, 160, 80, 0.06);
-    --border: rgba(234, 230, 220, 0.08);
-    --border-strong: rgba(234, 230, 220, 0.14);
+    --bg-deep: #faf8f4;
+    --bg-surface: #f0ece4;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f7f4ee;
+    --text-primary: #1a1815;
+    --text-secondary: #5e5a52;
+    --text-muted: #8e8a80;
+    --accent: #8b6914;
+    --accent-light: #a67c1e;
+    --accent-subtle: rgba(139, 105, 20, 0.08);
+    --accent-glow: rgba(139, 105, 20, 0.04);
+    --border: rgba(0, 0, 0, 0.08);
+    --border-strong: rgba(0, 0, 0, 0.12);
     --radius: 2px;
     --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
     --font-body: 'Lora', Georgia, 'Times New Roman', serif;
@@ -92,10 +92,11 @@
     border-bottom: 1px solid transparent;
   }
   .nav.scrolled {
-    background: rgba(10, 10, 15, 0.92);
+    background: rgba(250, 248, 244, 0.92);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom-color: var(--border);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
   .nav-logo {
     font-family: var(--font-display);
@@ -537,7 +538,7 @@
     font-size: 0.68rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--bg-deep);
+    color: #ffffff;
     background: var(--accent);
     border: none;
     padding: 0.9rem 2.2rem;
@@ -606,7 +607,7 @@
   }
 
   /* ── Selection ────────────────────── */
-  ::selection { background: rgba(196, 160, 80, 0.25); color: var(--text-primary); }
+  ::selection { background: rgba(139, 105, 20, 0.2); color: var(--text-primary); }
 </style>
 </head>
 <body>
@@ -923,7 +924,7 @@
     const btn = form.querySelector('.btn');
     const originalText = btn.textContent;
     btn.textContent = '已发送 ✓';
-    btn.style.background = '#2d5a3d';
+    btn.style.background = '#4a7c59';
     setTimeout(() => {
       btn.textContent = originalText;
       btn.style.background = '';
