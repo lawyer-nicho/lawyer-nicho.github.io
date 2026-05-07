@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 视频提示词撰写方法 — 夏瑾卓</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav class="nav scrolled">
+  <a href="../index.html" class="nav-logo">夏瑾卓</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#about">关于</a></li>
+    <li><a href="../index.html#professional">专业</a></li>
+    <li><a href="../index.html#insights">洞见</a></li>
+    <li><a href="../index.html#products">产品</a></li>
+    <li><a href="../index.html#contact">联系</a></li>
+  </ul>
+</nav>
+
+<section class="section article-page">
+  <a href="../index.html#products" class="article-back">← 返回产品</a>
+  <div class="article-header">
+    <span class="product-badge" style="margin-bottom: 1rem;">AI Prompt 模板</span>
+    <h1 class="article-title">AI 视频/图像提示词撰写方法</h1>
+    <p class="article-subtitle">九维度视觉分析框架，支持两种工作模式：上传画面自动分析并生成一比一还原提示词，或从文字描述智能补全转化为高质量生成提示词。</p>
+  </div>
+
+  <div class="article-body">
+
+    <h2>九维度分析框架</h2>
+    <p>任何视觉画面都可以沿九个维度拆解。这九个维度是提示词的骨架——缺任何一个，提示词就会在某一方面失控。</p>
+
+    <div style="overflow-x: auto; margin: 1.5rem 0;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+        <thead>
+          <tr style="border-bottom: 1px solid var(--border-strong); text-align: left;">
+            <th style="padding: 0.6rem 0.8rem; color: var(--accent); font-family: var(--font-mono); font-size: 0.65rem;">维度</th>
+            <th style="padding: 0.6rem 0.8rem; color: var(--accent); font-family: var(--font-mono); font-size: 0.65rem;">核心问题</th>
+            <th style="padding: 0.6rem 0.8rem; color: var(--accent); font-family: var(--font-mono); font-size: 0.65rem;">缺失后果</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.6rem 0.8rem;"><strong>主体</strong></td><td style="padding: 0.6rem 0.8rem; color: var(--text-secondary);">谁？外观细节？</td><td style="padding: 0.6rem 0.8rem; color: var(--text-secondary);">AI 随机生成主体外貌</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.6rem 0.8rem;"><strong>动作/姿态</strong></td><td style="padding: 0.6rem 0.8rem; color: var(--text-secondary);">主体在做什么？</td><td style="padding: 0.6rem 0.8rem; color: var(--text-secondary);">主体静止或无意义乱动</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.6rem 0.8rem;"><strong>环境</strong></td><td style="padding: 0.6rem 0.8rem; color: var(--text-secondary);">在哪里？时间？天气？</td><td style="padding: 0.6rem 0.8rem; color: var(--text-secondary);">背景随机填充</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.6rem 0.8rem;"><strong>光线</strong></td><td style="padding: 0.6rem 0.8rem; color: var(--text-secondary);">光源方向？光质？色温？</td><td style="padding: 0.6rem 0.8rem; color: var(--text-secondary);">光影平庸或与情绪矛盾</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.6rem 0.8rem;"><strong>色彩</strong></td><td style="padding: 0.6rem 0.8rem; color: var(--text-secondary);">主色调？饱和度？</td><td style="padding: 0.6rem 0.8rem; color: var(--text-secondary);">画面调性无控制</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.6rem 0.8rem;"><strong>构图</strong></td><td style="padding: 0.6rem 0.8rem; color: var(--text-secondary);">景别？角度？</td><td style="padding: 0.6rem 0.8rem; color: var(--text-secondary);">构图随机</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.6rem 0.8rem;"><strong>风格</strong></td><td style="padding: 0.6rem 0.8rem; color: var(--text-secondary);">写实/电影感/动画/3D？</td><td style="padding: 0.6rem 0.8rem; color: var(--text-secondary);">AI 使用默认审美</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.6rem 0.8rem;"><strong>动态</strong></td><td style="padding: 0.6rem 0.8rem; color: var(--text-secondary);">什么在动？多快？</td><td style="padding: 0.6rem 0.8rem; color: var(--text-secondary);">镜头静止或无意义运动</td></tr>
+          <tr><td style="padding: 0.6rem 0.8rem;"><strong>技术参数</strong></td><td style="padding: 0.6rem 0.8rem; color: var(--text-secondary);">画幅比？设备模拟？</td><td style="padding: 0.6rem 0.8rem; color: var(--text-secondary);">比例不对、质感错位</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>两种工作模式</h2>
+    <h3>模式一：画面 → 提示词</h3>
+    <p>上传视频或图片，自动沿九维度分析画面要素，生成可一比一还原的完整提示词。输出包含视觉分析摘要、主体提示词、风格与技术参数、动态提示词（视频专属）和负向提示词。</p>
+
+    <h3>模式二：文字 → 提示词</h3>
+    <p>用文字描述想要的画面，自动识别描述中的信息缺口，主动补充缺失维度并标注补充理由。输出前先给出"理解确认"——让用户在 AI 生成之前就能纠正理解偏差。这个设计对应知识诅咒的反咒语策略：不让 AI 以为自己看到了用户脑海中的画面。</p>
+
+    <h2>撰写原则</h2>
+    <ul>
+      <li><strong>从大到小</strong>——先定风格和主体，再填细节。如果风格提示词放在末尾，前面的细节可能被 AI 忽略</li>
+      <li><strong>名词优于形容词</strong>——"丝绸"比"光滑的布料"精确；"黄金时刻的逆光"比"温暖好看的光"可执行</li>
+      <li><strong>动态要有起止点</strong>——不是"一个人走路"，而是"从画面左侧走入，向右缓慢行走，在中央停下抬头看天"</li>
+      <li><strong>技术参数用具体值</strong>——画幅比用数字（16:9），设备用型号（ARRI Alexa 65），调色用已知风格名</li>
+    </ul>
+
+    <h2>与认知科学的关联</h2>
+    <p>提示词本质上是对 AI 的论证——主体提示词是"主张"，技术参数和风格是"根据"，负向提示词是"承认与回应"。模式二的缺口识别+理解确认设计，直接应用了知识诅咒的反咒语策略。</p>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <span>© 2026 夏瑾卓. All rights reserved.</span>
+  <span>Built with clarity & restraint.</span>
+</footer>
+</body>
+</html>

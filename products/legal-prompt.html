@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>法律案例检索分析 Prompt — 夏瑾卓</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav class="nav scrolled">
+  <a href="../index.html" class="nav-logo">夏瑾卓</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#about">关于</a></li>
+    <li><a href="../index.html#professional">专业</a></li>
+    <li><a href="../index.html#insights">洞见</a></li>
+    <li><a href="../index.html#products">产品</a></li>
+    <li><a href="../index.html#contact">联系</a></li>
+  </ul>
+</nav>
+
+<section class="section article-page">
+  <a href="../index.html#products" class="article-back">← 返回产品</a>
+  <div class="article-header">
+    <span class="product-badge" style="margin-bottom: 1rem;">AI Prompt 模板</span>
+    <h1 class="article-title">法律案例检索分析 Prompt</h1>
+    <p class="article-subtitle">将多年诉讼实务中对类案检索的方法论理解，封装为一套结构化的 AI 提示词模板。不是教会 AI 法律——而是让 AI 按照一个资深诉讼律师的思维框架来组织和呈现检索结果。</p>
+  </div>
+
+  <div class="article-body">
+
+    <h2>设计理念</h2>
+    <p>类案检索是诉讼律师最频繁也最耗时的工作之一。传统检索的问题不在于找不到案例，而在于找到了之后缺乏有效的分析框架——一堆判例摆在面前，哪些有关键参考价值？哪些看似相关实则误导？如何把分散的裁判观点整合为可操作的诉讼策略？</p>
+    <p>这个 Prompt 模板的核心设计思路是<strong>将 CRAR 法律论证范式嵌入 AI 输出结构</strong>——每一个案例的分析都遵循结论先行→事实梳理→裁判逻辑拆解的完整路径，最后以跨案例综合判断和风险评级收尾。</p>
+
+    <h2>模板结构</h2>
+    <p>Prompt 设定为资深诉讼律师角色，包含以下模块：</p>
+    <ol>
+      <li><strong>角色设定</strong>——资深诉讼律师，确保 AI 以专业法律视角而非通用视角处理问题</li>
+      <li><strong>检索条件</strong>——议题领域、司法管辖、时间范围、当事方类型、情景描述</li>
+      <li><strong>六节输出框架</strong>——核心结论→基本信息→事实梳理→裁判逻辑→启示→延伸线索</li>
+      <li><strong>综合判断</strong>——跨案例的裁判趋势分析和一致性判断</li>
+      <li><strong>风险评级</strong>——高/中/低三级，附评级理由</li>
+    </ol>
+
+    <h2>设计原理</h2>
+    <p>每个设计选择背后都有认知科学或论证理论的支撑：</p>
+    <ul>
+      <li><strong>核心结论前置</strong>遵循认知节律的"锚点优先"原则——让读者（律师自己）在接触细节之前先建立理解框架</li>
+      <li><strong>"待核实"指令</strong>对抗 AI 幻觉——明确要求对 AI 生成的内容标记置信度，推动使用者在引用前交叉验证</li>
+      <li><strong>"延伸线索"节</strong>利用 AI 的联想能力但限制其边界——只作为研究方向提示，不作为结论</li>
+      <li><strong>风险评级</strong>将分析转化为决策支持——从"信息"到"判断"的质变</li>
+    </ul>
+
+    <h2>适用范围</h2>
+    <ul>
+      <li>起诉前的类案胜诉率预估</li>
+      <li>答辩策略的判例支撑检索</li>
+      <li>上诉理由的裁判观点整合</li>
+      <li>法律研究备忘录的快速初稿</li>
+      <li>新类型案件的裁判趋势研判</li>
+    </ul>
+
+    <h2>与 CRAR 的关系</h2>
+    <p>这个 Prompt 的输出结构本质上是对 CRAR（Conclusion-Rule-Application-Result）范式的实战编码：每个案例的"核心结论"对应 Conclusion，"裁判逻辑"对应 Rule→Application，"启示"和"综合判断"拓展了传统 CRAR 的边界——加入了跨案例比较和风险评估维度。</p>
+
+    <h2>使用注意</h2>
+    <p>AI 生成的案例检索报告不能替代律师的独立判断。Prompt 中内置了"待核实"指令——每个案例的关键事实和法律适用要点都应回到原始裁判文书中验证。模板解决的是"分析框架"问题，不是"事实准确"问题。</p>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <span>© 2026 夏瑾卓. All rights reserved.</span>
+  <span>Built with clarity & restraint.</span>
+</footer>
+</body>
+</html>

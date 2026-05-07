@@ -6,613 +6,11 @@
 <title>夏瑾卓 — 诉讼律师 · 写作者 · 知识工作者</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg-deep: #faf8f4;
-    --bg-surface: #f0ece4;
-    --bg-card: #ffffff;
-    --bg-card-hover: #f7f4ee;
-    --text-primary: #1a1815;
-    --text-secondary: #5e5a52;
-    --text-muted: #8e8a80;
-    --accent: #8b6914;
-    --accent-light: #a67c1e;
-    --accent-subtle: rgba(139, 105, 20, 0.08);
-    --accent-glow: rgba(139, 105, 20, 0.04);
-    --border: rgba(0, 0, 0, 0.08);
-    --border-strong: rgba(0, 0, 0, 0.12);
-    --radius: 2px;
-    --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
-    --font-body: 'Lora', Georgia, 'Times New Roman', serif;
-    --font-mono: 'JetBrains Mono', 'Courier New', monospace;
-    --nav-height: 72px;
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html { scroll-behavior: smooth; scroll-padding-top: var(--nav-height); }
-
-  body {
-    background: var(--bg-deep);
-    color: var(--text-primary);
-    font-family: var(--font-body);
-    font-size: 17px;
-    line-height: 1.75;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
-  }
-
-  /* ── Typography ───────────────────── */
-  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; line-height: 1.25; }
-  h1 { font-size: clamp(2.8rem, 6vw, 5rem); letter-spacing: -0.01em; }
-  h2 { font-size: clamp(2rem, 4vw, 3.2rem); letter-spacing: -0.005em; }
-  h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); letter-spacing: 0; }
-  h4 { font-size: 1rem; font-family: var(--font-mono); font-weight: 300; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); }
-
-  p + p { margin-top: 1.2em; }
-
-  a { color: var(--accent-light); text-decoration: none; transition: color 0.3s ease; }
-  a:hover { color: var(--text-primary); }
-
-  .accent-line {
-    display: block;
-    width: 48px;
-    height: 1px;
-    background: var(--accent);
-    margin: 0 0 2rem 0;
-    transform-origin: left;
-  }
-
-  .section-label {
-    display: inline-block;
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    font-weight: 300;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1.2rem;
-  }
-
-  /* ── Navigation ───────────────────── */
-  .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--nav-height);
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 clamp(1.5rem, 5vw, 4rem);
-    transition: background 0.4s ease, border-color 0.4s ease;
-    border-bottom: 1px solid transparent;
-  }
-  .nav.scrolled {
-    background: rgba(250, 248, 244, 0.92);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom-color: var(--border);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-  }
-  .nav-logo {
-    font-family: var(--font-display);
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    letter-spacing: -0.01em;
-  }
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
-  .nav-links a {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    font-weight: 300;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--text-secondary);
-    transition: color 0.3s ease;
-  }
-  .nav-links a:hover { color: var(--accent-light); }
-
-  /* ── Layout ───────────────────────── */
-  .section {
-    padding: clamp(5rem, 10vw, 10rem) clamp(1.5rem, 5vw, 4rem);
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  .section-wide {
-    padding: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 5vw, 4rem);
-    max-width: 1280px;
-    margin: 0 auto;
-  }
-
-  /* ── Hero ─────────────────────────── */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: clamp(2rem, 5vw, 4rem);
-    max-width: 1100px;
-    margin: 0 auto;
-    position: relative;
-  }
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1px 1fr;
-    gap: 0;
-    align-items: center;
-    min-height: 70vh;
-  }
-  .hero-main {
-    padding-right: clamp(2rem, 5vw, 5rem);
-  }
-  .hero-name {
-    font-family: var(--font-display);
-    font-size: clamp(3.5rem, 7vw, 6rem);
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    line-height: 1.05;
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-  }
-  .hero-name .dot {
-    color: var(--accent);
-  }
-  .hero-tagline {
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: clamp(1.1rem, 2vw, 1.35rem);
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 2.5rem;
-    max-width: 28em;
-  }
-  .hero-divider {
-    width: 1px;
-    height: 100%;
-    min-height: 280px;
-    background: linear-gradient(to bottom, transparent, var(--accent), transparent);
-    opacity: 0.4;
-    justify-self: center;
-  }
-  .hero-side {
-    padding-left: clamp(2rem, 5vw, 5rem);
-  }
-  .hero-label {
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1.5rem;
-  }
-  .hero-side p {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    line-height: 1.9;
-    max-width: 24em;
-  }
-  .hero-side p + p { margin-top: 1.5em; }
-  .hero-scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    opacity: 0.5;
-    animation: floatDown 2s ease-in-out infinite;
-  }
-  .hero-scroll-indicator span {
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-  }
-  .hero-scroll-line {
-    width: 1px;
-    height: 36px;
-    background: linear-gradient(to bottom, var(--text-muted), transparent);
-  }
-
-  @keyframes floatDown {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(8px); }
-  }
-
-  /* ── About ────────────────────────── */
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: clamp(3rem, 6vw, 6rem);
-    align-items: start;
-  }
-  .about-lede {
-    font-family: var(--font-display);
-    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-    line-height: 1.5;
-    color: var(--text-primary);
-  }
-  .about-lede em {
-    font-style: italic;
-    color: var(--accent-light);
-  }
-  .about-body {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    line-height: 1.9;
-  }
-  .about-mission {
-    margin-top: 2.5rem;
-    padding: 1.8rem 2rem;
-    border-left: 1px solid var(--accent);
-    background: var(--bg-surface);
-    border-radius: 0 var(--radius) var(--radius) 0;
-  }
-  .about-mission blockquote {
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: 1.15rem;
-    line-height: 1.55;
-    color: var(--text-primary);
-    margin: 0;
-  }
-  .about-mission cite {
-    display: block;
-    margin-top: 0.8rem;
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    font-style: normal;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent);
-  }
-
-  /* ── Professional ─────────────────── */
-  .professional { background: var(--bg-surface); }
-  .prof-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 3rem;
-  }
-  .prof-card {
-    background: var(--bg-card);
-    padding: 2.2rem;
-    border-radius: var(--radius);
-    transition: background 0.35s ease, transform 0.35s ease;
-    cursor: default;
-  }
-  .prof-card:hover {
-    background: var(--bg-card-hover);
-    transform: translateY(-2px);
-  }
-  .prof-card-icon {
-    font-family: var(--font-mono);
-    font-size: 2rem;
-    color: var(--accent);
-    margin-bottom: 1.2rem;
-    font-weight: 300;
-  }
-  .prof-card h3 { margin-bottom: 0.7rem; }
-  .prof-card p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    line-height: 1.75;
-  }
-
-  /* ── Stats row ────────────────────── */
-  .stats-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    background: var(--border);
-    margin-top: 3.5rem;
-  }
-  .stat-item {
-    background: var(--bg-card);
-    padding: 2rem 1.5rem;
-    text-align: center;
-  }
-  .stat-number {
-    font-family: var(--font-display);
-    font-size: 2.4rem;
-    font-weight: 600;
-    color: var(--accent-light);
-    line-height: 1;
-    margin-bottom: 0.4rem;
-  }
-  .stat-label {
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-  }
-
-  /* ── Insights / Articles ──────────── */
-  .insights-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .insights-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-  .insight-card {
-    background: var(--bg-card);
-    padding: 2.2rem;
-    border-radius: var(--radius);
-    transition: background 0.35s ease, transform 0.35s ease;
-    cursor: pointer;
-  }
-  .insight-card:hover {
-    background: var(--bg-card-hover);
-    transform: translateY(-2px);
-  }
-  .insight-domain {
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 1rem;
-  }
-  .insight-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.6rem;
-    line-height: 1.4;
-  }
-  .insight-card p {
-    font-size: 0.88rem;
-    color: var(--text-secondary);
-    line-height: 1.7;
-  }
-  .insight-card .read-more {
-    display: inline-block;
-    margin-top: 1.2rem;
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--accent-light);
-    transition: color 0.3s ease;
-  }
-  .insight-card:hover .read-more { color: var(--text-primary); }
-
-  /* ── Products ─────────────────────── */
-  .products { background: var(--bg-surface); }
-  .products-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-  .product-card {
-    background: var(--bg-card);
-    border-radius: var(--radius);
-    overflow: hidden;
-    transition: background 0.35s ease, transform 0.35s ease;
-  }
-  .product-card:hover {
-    background: var(--bg-card-hover);
-    transform: translateY(-2px);
-  }
-  .product-card-inner { padding: 2.2rem; }
-  .product-badge {
-    display: inline-block;
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 0.25rem 0.8rem;
-    border: 1px solid var(--accent);
-    color: var(--accent-light);
-    border-radius: 100px;
-    margin-bottom: 1.2rem;
-  }
-  .product-card h3 { margin-bottom: 0.6rem; }
-  .product-card p {
-    font-size: 0.88rem;
-    color: var(--text-secondary);
-    line-height: 1.7;
-  }
-  .product-features {
-    margin-top: 1.2rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-  .product-feature-tag {
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.08em;
-    color: var(--text-muted);
-    padding: 0.2rem 0.6rem;
-    border: 1px solid var(--border);
-    border-radius: 100px;
-  }
-
-  /* ── Contact ──────────────────────── */
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(3rem, 6vw, 6rem);
-  }
-  .contact-cta {
-    font-family: var(--font-display);
-    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-    line-height: 1.45;
-    color: var(--text-primary);
-    margin-bottom: 1.5rem;
-  }
-  .contact-detail {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    line-height: 1.8;
-  }
-  .contact-links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border);
-  }
-  .contact-link {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-    color: var(--text-secondary);
-    transition: color 0.3s ease;
-  }
-  .contact-link:hover { color: var(--accent-light); }
-  .contact-link .link-icon {
-    width: 28px;
-    height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--border);
-    border-radius: 50%;
-    font-size: 0.7rem;
-    flex-shrink: 0;
-    color: var(--accent);
-  }
-  .contact-form-side {
-    background: var(--bg-card);
-    padding: 2.5rem;
-    border-radius: var(--radius);
-  }
-  .form-group { margin-bottom: 1.5rem; }
-  .form-group label {
-    display: block;
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 0.5rem;
-  }
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    background: var(--bg-surface);
-    border: 1px solid var(--border);
-    color: var(--text-primary);
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    padding: 0.85rem 1rem;
-    border-radius: var(--radius);
-    transition: border-color 0.3s ease;
-    resize: vertical;
-  }
-  .form-group input:focus,
-  .form-group textarea:focus {
-    outline: none;
-    border-color: var(--accent);
-  }
-  .form-group textarea { min-height: 120px; }
-  .btn {
-    display: inline-block;
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #ffffff;
-    background: var(--accent);
-    border: none;
-    padding: 0.9rem 2.2rem;
-    border-radius: var(--radius);
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-  }
-  .btn:hover { background: var(--accent-light); transform: translateY(-1px); }
-  .btn-ghost {
-    background: transparent;
-    color: var(--accent-light);
-    border: 1px solid var(--accent);
-  }
-  .btn-ghost:hover { background: var(--accent-subtle); color: var(--text-primary); }
-
-  /* ── Footer ───────────────────────── */
-  .footer {
-    border-top: 1px solid var(--border);
-    padding: 2rem clamp(1.5rem, 5vw, 4rem);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    max-width: 1280px;
-    margin: 0 auto;
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-  }
-
-  /* ── Reveal animations ────────────── */
-  .reveal {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .reveal-delay-1 { transition-delay: 0.1s; }
-  .reveal-delay-2 { transition-delay: 0.2s; }
-  .reveal-delay-3 { transition-delay: 0.3s; }
-  .reveal-delay-4 { transition-delay: 0.4s; }
-
-  /* ── Responsive ───────────────────── */
-  @media (max-width: 900px) {
-    .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .hero-divider { display: none; }
-    .hero-side { padding-left: 0; }
-    .hero-main { padding-right: 0; }
-    .about-grid { grid-template-columns: 1fr; }
-    .prof-grid { grid-template-columns: 1fr; }
-    .insights-grid { grid-template-columns: 1fr; }
-    .products-grid { grid-template-columns: 1fr; }
-    .contact-grid { grid-template-columns: 1fr; }
-    .stats-row { grid-template-columns: repeat(2, 1fr); }
-    .nav-links { display: none; }
-  }
-  @media (max-width: 500px) {
-    .stats-row { grid-template-columns: 1fr 1fr; }
-    .hero-name { font-size: 2.8rem; }
-  }
-
-  /* ── Selection ────────────────────── */
-  ::selection { background: rgba(139, 105, 20, 0.2); color: var(--text-primary); }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Navigation -->
 <nav class="nav" id="nav">
   <a href="#home" class="nav-logo">夏瑾卓</a>
   <ul class="nav-links">
@@ -624,7 +22,6 @@
   </ul>
 </nav>
 
-<!-- Hero -->
 <section class="hero" id="home">
   <div class="hero-grid">
     <div class="hero-main">
@@ -641,7 +38,7 @@
         每一次在冲突中直面恐惧，都不是消耗——而是能量的增益。法庭如此，写作如此，生活亦如此。
       </p>
       <p>
-        <em style="font-style: italic; color: var(--accent-light);">获得勇气，是我的人生使命。</em>
+        <em style="font-weight: 600; font-style: normal; color: var(--accent);">获得勇气，是我的人生使命。</em>
       </p>
     </div>
   </div>
@@ -651,12 +48,11 @@
   </div>
 </section>
 
-<!-- About -->
 <section class="section" id="about">
   <span class="section-label reveal">关于</span>
   <div class="about-grid">
     <div class="about-lede reveal reveal-delay-1">
-      我是夏瑾卓，一名执业诉讼律师，也是一个沉迷于<span style="font-style: italic; color: var(--accent-light);">认知科学与写作</span>的思想实践者。
+      我是夏瑾卓，一名执业诉讼律师，也是一个沉迷于<span style="font-weight: 600; font-style: normal; color: var(--accent);">认知科学与写作</span>的思想实践者。
     </div>
     <div class="about-body reveal reveal-delay-2">
       <p>
@@ -675,7 +71,6 @@
   </div>
 </section>
 
-<!-- Professional -->
 <section class="professional" id="professional">
   <div class="section-wide">
     <span class="section-label reveal">专业领域</span>
@@ -724,7 +119,6 @@
   </div>
 </section>
 
-<!-- Insights -->
 <section class="section-wide" id="insights">
   <div class="insights-header">
     <div>
@@ -733,42 +127,41 @@
     </div>
   </div>
   <div class="insights-grid">
-    <div class="insight-card reveal reveal-delay-1">
+    <a href="articles/curse-of-knowledge.html" class="insight-card reveal reveal-delay-1">
       <div class="insight-domain">认知科学</div>
       <h3>知识的诅咒：为什么专家写的东西难懂</h3>
       <p>
         一旦你知道了某件事，就几乎不可能想象不知道它是什么感觉。这是法律写作中最隐蔽的陷阱——不是法律适用错误，而是认知预设错误。
       </p>
       <span class="read-more">阅读更多 →</span>
-    </div>
-    <div class="insight-card reveal reveal-delay-2">
+    </a>
+    <a href="articles/cognitive-rhythm.html" class="insight-card reveal reveal-delay-2">
       <div class="insight-domain">写作方法</div>
       <h3>认知节律：大脑如何处理句子</h3>
       <p>
         锚点优先、事件模型优先、话题连续性、句末安全区——这四个节律特征解释了为什么有些句子读起来流畅，有些让人反复回读。
       </p>
       <span class="read-more">阅读更多 →</span>
-    </div>
-    <div class="insight-card reveal reveal-delay-3">
+    </a>
+    <a href="articles/reasons-vs-evidence.html" class="insight-card reveal reveal-delay-3">
       <div class="insight-domain">法律论证</div>
       <h3>理由不是证据：法律写作中最关键的区分</h3>
       <p>
         理由是写作者对证据的概括和解释——证据不会自己说话。区分理由与证据，是构建不可推翻之论证的第一步。
       </p>
       <span class="read-more">阅读更多 →</span>
-    </div>
-    <div class="insight-card reveal reveal-delay-4">
+    </a>
+    <a href="articles/zhu-guangqian.html" class="insight-card reveal reveal-delay-4">
       <div class="insight-domain">美学</div>
       <h3>朱光潜的距离说与法律人的审美修养</h3>
       <p>
         实用、科学、美感——朱光潜用对一棵古松的三种态度，解释了为什么法律人需要审美的维度来平衡理性的锋利。
       </p>
       <span class="read-more">阅读更多 →</span>
-    </div>
+    </a>
   </div>
 </section>
 
-<!-- Products -->
 <section class="products" id="products">
   <div class="section-wide">
     <span class="section-label reveal">知识产品</span>
@@ -777,7 +170,7 @@
       将多年积累的法律写作方法论和认知框架，封装为可复用的 AI 提示词模板和工作流。不是教你做什么——而是给你一个已经验证过的思考框架。
     </p>
     <div class="products-grid">
-      <div class="product-card reveal reveal-delay-1">
+      <a href="products/legal-prompt.html" class="product-card reveal reveal-delay-1" style="display: block; text-decoration: none; color: inherit;">
         <div class="product-card-inner">
           <span class="product-badge">AI Prompt 模板</span>
           <h3>法律案例检索分析 Prompt</h3>
@@ -790,8 +183,8 @@
             <span class="product-feature-tag">延伸线索</span>
           </div>
         </div>
-      </div>
-      <div class="product-card reveal reveal-delay-2">
+      </a>
+      <a href="products/video-prompt.html" class="product-card reveal reveal-delay-2" style="display: block; text-decoration: none; color: inherit;">
         <div class="product-card-inner">
           <span class="product-badge">AI Prompt 模板</span>
           <h3>AI 视频/图像提示词撰写方法</h3>
@@ -804,8 +197,8 @@
             <span class="product-feature-tag">场景种子</span>
           </div>
         </div>
-      </div>
-      <div class="product-card reveal reveal-delay-3">
+      </a>
+      <a href="products/argument-pyramid.html" class="product-card reveal reveal-delay-3" style="display: block; text-decoration: none; color: inherit;">
         <div class="product-card-inner">
           <span class="product-badge">方法论框架</span>
           <h3>论证五要素金字塔</h3>
@@ -818,8 +211,8 @@
             <span class="product-feature-tag">合作式论证</span>
           </div>
         </div>
-      </div>
-      <div class="product-card reveal reveal-delay-4">
+      </a>
+      <a href="products/knowledge-vectors.html" class="product-card reveal reveal-delay-4" style="display: block; text-decoration: none; color: inherit;">
         <div class="product-card-inner">
           <span class="product-badge">方法论框架</span>
           <h3>知识整合四向量</h3>
@@ -832,12 +225,11 @@
             <span class="product-feature-tag">创作向量</span>
           </div>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- Contact -->
 <section class="section" id="contact">
   <span class="section-label reveal">联系</span>
   <div class="contact-grid">
@@ -853,7 +245,7 @@
           <span class="link-icon">@</span> nicho@legal-thinking.com
         </a>
         <a href="#" class="contact-link">
-          <span class="link-icon">GH</span> github.com/nicho
+          <span class="link-icon">GH</span> github.com/lawyer-nicho
         </a>
         <a href="#" class="contact-link">
           <span class="link-icon">WX</span> 微信公众号：法律与认知
@@ -880,29 +272,17 @@
   </div>
 </section>
 
-<!-- Footer -->
 <footer class="footer">
-  <span>© 2026 夏瑾卓. All rights reserved.</span>
-  <span>Built with clarity & restraint.</span>
+  <span>&copy; 2026 夏瑾卓. All rights reserved.</span>
+  <span>Built with clarity &amp; restraint.</span>
 </footer>
 
 <script>
-  // ── Scroll-aware navigation ────────
   const nav = document.getElementById('nav');
-  const scrollThreshold = 80;
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 80);
+  }, { passive: true });
 
-  function updateNav() {
-    if (window.scrollY > scrollThreshold) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  }
-  window.addEventListener('scroll', updateNav, { passive: true });
-  updateNav();
-
-  // ── Scroll reveal ──────────────────
-  const revealElements = document.querySelectorAll('.reveal');
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -910,39 +290,25 @@
         revealObserver.unobserve(entry.target);
       }
     });
-  }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px'
-  });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-  revealElements.forEach(el => revealObserver.observe(el));
-
-  // ── Form handling ──────────────────
-  const form = document.getElementById('contactForm');
-  form.addEventListener('submit', (e) => {
+  document.getElementById('contactForm').addEventListener('submit', (e) => {
     e.preventDefault();
-    const btn = form.querySelector('.btn');
-    const originalText = btn.textContent;
+    const btn = e.target.querySelector('.btn');
+    const orig = btn.textContent;
     btn.textContent = '已发送 ✓';
     btn.style.background = '#4a7c59';
-    setTimeout(() => {
-      btn.textContent = originalText;
-      btn.style.background = '';
-      form.reset();
-    }, 2500);
+    setTimeout(() => { btn.textContent = orig; btn.style.background = ''; e.target.reset(); }, 2500);
   });
 
-  // ── Smooth scroll for nav links ────
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
       e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
+      const t = document.querySelector(this.getAttribute('href'));
+      if (t) t.scrollIntoView({ behavior: 'smooth' });
     });
   });
 </script>
-
 </body>
 </html>
