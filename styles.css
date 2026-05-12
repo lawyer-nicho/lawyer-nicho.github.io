@@ -412,6 +412,7 @@
   .insights-grid > :nth-child(2) .insight-domain { color: var(--accent-purple); background: rgba(123, 107, 138, 0.07); }
   .insights-grid > :nth-child(3) .insight-domain { color: var(--accent-rust); background: rgba(184, 132, 90, 0.07); }
   .insights-grid > :nth-child(4) .insight-domain { color: var(--accent); background: rgba(139, 105, 20, 0.07); }
+  .insights-grid > :nth-child(5) .insight-domain { color: #4a7c59; background: rgba(74, 124, 89, 0.07); }
   .insight-card h3 {
     font-size: 1.3rem;
     margin-bottom: 0.6rem;
