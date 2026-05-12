@@ -244,7 +244,7 @@
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: clamp(3rem, 6vw, 6rem);
-    align-items: start;
+    align-items: center;
   }
   .about-lede {
     font-family: var(--font-display);
@@ -258,10 +258,46 @@
     font-style: normal;
     color: var(--accent);
   }
-  .about-body {
-    color: var(--text-secondary);
+  .about-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-portrait {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: var(--radius);
+    filter: grayscale(30%) contrast(0.95) brightness(1.02);
+    transition: filter 0.5s ease;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  }
+  .about-portrait:hover {
+    filter: grayscale(0%) contrast(1) brightness(1);
+  }
+  .about-content {
+    max-width: 680px;
+    margin-top: 3rem;
+  }
+  .about-content p {
     font-size: 0.95rem;
+    color: var(--text-secondary);
     line-height: 1.9;
+  }
+  .about-photo-alt {
+    margin-top: 2rem;
+    max-width: 640px;
+  }
+  .about-portrait-alt {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    filter: grayscale(30%) contrast(0.95) brightness(1.02);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    transition: filter 0.5s ease;
+  }
+  .about-portrait-alt:hover {
+    filter: grayscale(0%) contrast(1) brightness(1);
   }
   .about-mission {
     margin-top: 2.5rem;
@@ -269,6 +305,7 @@
     border-left: 1px solid var(--accent);
     background: var(--bg-surface);
     border-radius: 0 var(--radius) var(--radius) 0;
+    max-width: 680px;
   }
   .about-mission blockquote {
     font-family: var(--font-display);
@@ -644,6 +681,8 @@
     .contact-grid { grid-template-columns: 1fr; }
     .stats-row { grid-template-columns: repeat(2, 1fr); }
     .nav-links { display: none; }
+    .about-portrait { max-width: 320px; }
+    .about-content { margin-top: 2rem; }
   }
   @media (max-width: 500px) {
     .stats-row { grid-template-columns: 1fr 1fr; }
